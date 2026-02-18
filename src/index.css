@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=DM+Sans:opsz,wght@9..40,400..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cream text-ink font-sans antialiased overflow-x-hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-black tracking-tight text-ink;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-3 rounded-full bg-brand-orange text-cream font-sans font-bold text-lg uppercase tracking-wide border-2 border-brand-orange shadow-brutal hover:shadow-brutal-hover transform hover:-translate-y-0.5 transition-all duration-200 active:scale-95 active:shadow-none;
+  }
+  .btn-secondary {
+    @apply px-8 py-3 rounded-full bg-white text-ink font-sans font-bold text-lg uppercase tracking-wide border-2 border-ink shadow-brutal hover:shadow-brutal-hover transform hover:-translate-y-0.5 transition-all duration-200 active:scale-95 active:shadow-none;
+  }
+  .card {
+    @apply bg-white rounded-xl border-2 border-ink shadow-brutal p-6;
+  }
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg border-2 border-ink focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 focus:outline-none transition-all font-sans;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-ink/20 rounded-full hover:bg-ink/40;
+}
